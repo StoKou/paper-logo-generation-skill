@@ -60,7 +60,7 @@
 
 ## 展示案例
 
-这里已经接入了一篇真实论文案例，用来展示这个 Skill 如何把论文内容转成可传播的视觉方向。
+这里接入了一篇真实论文案例，用来展示“论文内容”与“Logo 展示”本身。
 
 **论文标题**
 
@@ -72,23 +72,14 @@
 - [arXiv 摘要](https://arxiv.org/abs/2603.09970)
 - [PDF 下载](https://arxiv.org/pdf/2603.09970.pdf)
 
-**案例关键词**
-
-- `evaluation`
-- `reasoning`
-- `gui`
-- `prompting`
-
-**案例产物**
+**案例展示**
 
 - 原始论文 Logo：`docs/assets/create-testing-llms-logo.png`
-- 对应 Prompt：`/root/sk/code/collect-paper-logo/papers-logo/create-testing-llms/prompt.md`
 
 这个案例会同时展示在 GitHub Pages 首页中，用来直观说明：
 
 - 论文原始 Logo 长什么样
-- Skill 为它提炼了哪些关键词
-- 最终 Prompt 是如何围绕同一篇论文展开的
+- 这篇论文对应的视觉标识效果
 
 ## 安装方式
 
