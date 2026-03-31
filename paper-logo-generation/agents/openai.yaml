@@ -1,0 +1,4 @@
+version: 1
+display_name: Paper Logo Prompt Writer
+short_description: Read a paper PDF or paper URL and turn it into a mascot-based logo prompt.
+default_prompt: Read the paper abstract and core contributions, extract 2-4 keywords, choose an anime-style animal mascot, and return a Nano Banana 2-ready paper logo prompt.
