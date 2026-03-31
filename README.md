@@ -1,73 +1,101 @@
 # 论文 Logo Prompt 生成 Skill
 
-让论文先拥有一句好提示词，再拥有一枚真正像作品的 Logo。
+让论文先拥有一句好 Prompt，再拥有一枚真正像项目作品的 Logo。
 
-`paper-logo-generation` 是一个专门为论文项目设计的 Skill。它接收论文 PDF、arXiv 链接、Hugging Face 论文页，或本地论文文件夹，然后把抽象的研究内容压缩成一段可以直接交给 Nano Banana 2 的图像生成提示词。
+[![主页](https://img.shields.io/badge/项目主页-在线查看-ff7f50?style=for-the-badge)](https://stokou.github.io/paper-logo-generation-skill/)
+[![Skill 目录](https://img.shields.io/badge/Skill-paper--logo--generation-1f1636?style=for-the-badge)](./paper-logo-generation/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-/docs%20发布路径-ffc857?style=for-the-badge)](./docs/)
 
-它不会停留在“总结论文”这一步，而是进一步完成：
+## 一句话介绍
+
+`paper-logo-generation` 是一个专门面向论文项目传播的 Skill。
+
+它读取论文 PDF、论文链接或本地论文文件夹，从摘要与核心贡献中提炼关键词，匹配一个合适的动漫风动物主角，最后输出一段可直接用于 Nano Banana 2 的 Logo Prompt。
+
+## 快速入口
+
+[在线主页](https://stokou.github.io/paper-logo-generation-skill/)
+
+[查看 Skill](./paper-logo-generation/SKILL.md)
+
+[查看风格规范](./paper-logo-generation/style.md)
+
+[查看 Prompt 模板](./paper-logo-generation/references/prompt-template.md)
+
+## 它能做什么
+
+它不会只停留在“总结论文”。
+
+它会继续往前走一步，把论文里抽象的方法感、领域感和项目气质，压缩成一段更适合生成视觉 Logo 的 Prompt：
 
 - 读取论文摘要与核心贡献
 - 提炼 2 到 4 个可视化关键词
 - 选择一个与论文气质匹配的动漫动物主角
-- 组合成一段更像品牌提案而不是通用 AI 绘图描述的 Prompt
+- 生成更像品牌概念提案的图片 Prompt
 
-## 安装方式
+## 为什么这个项目更像作品，而不是模板
 
-告诉 Claude 从这个 GitHub 仓库安装 Skill：
+很多工具只会把论文转成一段通用的绘图描述。
 
-`https://github.com/StoKou/paper-logo-generation-skill.git`
+这个项目更关心的是“识别度”与“传播感”：
 
-Skill 主体目录：
-
-`paper-logo-generation/`
+- 为什么这篇论文适合这个动物主角
+- 哪些技术关键词值得被视觉化
+- 如何让图像结果更像项目 Logo，而不是一张普通插画
 
 ## 使用方式
 
-你只需要给它下面任意一种输入：
+你只需要提供下面任意一种输入：
 
 - 一篇论文 PDF
 - 一条 arXiv / Hugging Face 论文链接
 - 一个包含论文 PDF 的本地文件夹
 
-随后它会返回一份结构化结果，包含：
+随后 Skill 会返回结构化结果，通常包括：
 
-- 论文标题
-- 关键词
-- 动物主角
-- 最终图片生成 Prompt
+- `Title`
+- `Keywords`
+- `Mascot`
+- `Prompt`
 
-## 这个项目的风格
+## 安装方式
 
-这不是一个生成“普通海报提示词”的工具。
+告诉 Claude 从这个仓库安装 Skill：
 
-它更像一个轻量的视觉概念设计器，核心目标是把论文里的方法感、领域感和项目气质，转成一个足够鲜明、足够好记、也足够适合传播的 Logo 方向。
+`https://github.com/StoKou/paper-logo-generation-skill.git`
 
-换句话说，它关注的不只是“画什么”，更是：
+Skill 主体目录位于：
 
-- 为什么这个动物适合这篇论文
-- 哪几个技术关键词值得被视觉化
-- 怎么让生成结果看起来像项目 Logo，而不是一张泛泛的插画
+`paper-logo-generation/`
 
-## 仓库结构
+## 项目结构
 
-- `README.md`：项目说明与安装指引
+- `README.md`：项目首页说明
 - `paper-logo-generation/SKILL.md`：Skill 主流程
 - `paper-logo-generation/style.md`：Logo Prompt 风格规范
 - `paper-logo-generation/references/prompt-template.md`：输出模板参考
 - `paper-logo-generation/meta.md`：项目元信息与后续优化方向
 - `docs/`：GitHub Pages 站点目录
 
-## GitHub Pages 构建方式
+## 在线展示
 
-这个仓库已经按 GitHub Pages 的推荐方式整理为：
+项目主页：
 
-- 发布分支：`main`
-- 发布目录：`/docs`
+`https://stokou.github.io/paper-logo-generation-skill/`
 
-站点入口文件是：
+如果你想直接预览静态页面，可以从这里进入：
+
+[打开项目主页](https://stokou.github.io/paper-logo-generation-skill/)
+
+## GitHub Pages
+
+这个仓库已经按 GitHub Pages 的发布方式整理完成：
+
+- 分支：`main`
+- 目录：`/docs`
+
+站点入口文件：
 
 - `docs/index.html`
 - `docs/styles.css`
 - `docs/.nojekyll`
-
-如果仓库设置中的 Pages 来源选择为 `Deploy from a branch`，并且目录指向 `main` 分支下的 `/docs`，页面就可以直接发布。
