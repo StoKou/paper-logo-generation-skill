@@ -1,27 +1,27 @@
-# Prompt Template Reference
+# Prompt 模板参考
 
-Use this structure for the final output:
+最终输出建议使用下面的结构：
 
 ```md
-# <paper title>
+# <论文标题>
 
 ## Keywords
-- keyword 1
-- keyword 2
-- keyword 3
+- 关键词 1
+- 关键词 2
+- 关键词 3
 
 ## Mascot
-- animal: <animal>
-- rationale: <one-line reason>
+- animal: <动物名称>
+- rationale: <一句话说明原因>
 
 ## Prompt
-<final direct prompt for Nano Banana 2>
+<最终可直接用于 Nano Banana 2 的 Prompt>
 ```
 
-Prompt-writing guidance:
+写 Prompt 时建议遵循：
 
-- Mention the mascot first.
-- Translate the paper's contribution into one clear visual metaphor.
-- Keep the background simple.
-- Ask for a crisp logo-mark composition with premium illustration finish.
-- End with constraints such as `no text, no letters, no watermark, no UI, transparent or clean background`.
+- 先明确动物主角。
+- 把论文贡献转成一个清晰的视觉隐喻。
+- 背景保持简洁。
+- 强调 Logo 感、标志感、精致插画质感。
+- 结尾补上约束，例如：`不要文字、不要字母、不要水印、不要 UI、透明底或干净背景`。

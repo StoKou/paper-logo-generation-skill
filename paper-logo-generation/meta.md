@@ -1,43 +1,32 @@
-# Project Meta
+# 项目元信息
 
-## Goal
+## 项目目标
 
-Build a reusable `paper-logo-generation` skill that reads a paper and produces a Nano Banana 2-ready logo prompt.
+构建一个可复用的 `paper-logo-generation` Skill，让用户输入论文后，直接获得一段适合 Nano Banana 2 的论文 Logo Prompt。
 
-## Core workflow
+## 核心流程
 
-1. Read the paper abstract.
-2. Read contribution-heavy text from the introduction.
-3. Extract 2 to 4 keywords.
-4. Map the paper to an anime-style animal mascot.
-5. Output a direct image prompt.
+1. 阅读论文摘要。
+2. 阅读最能体现贡献的引言或总结段落。
+3. 提取 2 到 4 个关键词。
+4. 为论文挑选一个动漫风动物主角。
+5. 输出最终图片生成 Prompt。
 
-## Important files
+## 关键文件
 
-- `SKILL.md`: skill definition and workflow
-- `style.md`: prompt styling rules
-- `references/prompt-template.md`: output format reference
-- `agents/openai.yaml`: default subagent-facing metadata
-- `agents/paper-logo-batch-subagent.md`: batch subagent role instructions
+- `SKILL.md`：Skill 定义与工作流
+- `style.md`：Prompt 的风格规范
+- `references/prompt-template.md`：输出格式参考
 
-## Batch target
+## 仓库地址
 
-- Source folders: `/root/sk/code/collect-paper-logo/papers-logo/*`
-- Output file per folder: `prompt.md`
+- GitHub：`https://github.com/StoKou/paper-logo-generation-skill.git`
+- 默认分支：`main`
 
-## Git target
+## 后续可优化方向
 
-- Repository: `https://github.com/StoKou/paper-logo-generation-skill.git`
-- Default branch: `main`
-
-## Safety note
-
-GitHub access credentials were supplied in the task context, but they are intentionally not persisted into repository files. Use them only at push time.
-
-## Future improvements
-
-- Improve keyword extraction with section-aware parsing for papers that use nonstandard headings.
-- Add a richer domain-to-mascot map for biotech, security, math, and systems papers.
-- Add prompt variants for minimalist logo, emblem badge, and launch-poster mascot.
-- Add optional support for reading title and abstract from paper URLs directly.
-- Add regression examples to validate prompt quality across paper domains.
+- 加强对非标准论文版式的摘要与贡献抽取能力。
+- 丰富不同研究领域到动物主角的映射表。
+- 增加多种 Prompt 风格分支，例如极简 Logo、徽章感 Logo、宣传海报感 Logo。
+- 支持直接读取更多论文链接来源，而不仅限于 PDF。
+- 增加示例集，用于持续校验 Prompt 质量。

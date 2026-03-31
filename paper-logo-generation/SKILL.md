@@ -1,56 +1,55 @@
 ---
 name: paper-logo-generation
-description: Generate a polished image prompt for a paper logo from a research paper PDF or paper URL. Use this when the user wants a paper-specific logo concept, mascot direction, or Nano Banana 2 prompt for a paper, technical report, or project paper. The workflow reads the paper abstract and core contributions, extracts 2-4 keywords, selects an anime-style animal mascot, and returns a ready-to-use image prompt.
+description: 从论文 PDF、论文链接或本地论文文件夹中生成可直接用于 Nano Banana 2 的论文 Logo 提示词。适用于需要为论文、技术报告或项目论文设计宣传 Logo 概念的场景。流程会读取摘要与核心贡献，提炼 2 到 4 个关键词，选择一个动漫风动物主角，并输出最终图片生成 Prompt。
 ---
 
-# Paper Logo Generation
+# 论文 Logo Prompt 生成
 
-Use this skill when the user provides a paper PDF, arXiv link, Hugging Face paper link, or a local folder containing a paper PDF and wants a logo-generation prompt.
+当用户提供论文 PDF、arXiv 链接、Hugging Face 论文链接，或者一个包含论文 PDF 的本地文件夹，并希望为该论文生成 Logo 提示词时，使用这个 Skill。
 
-Read [style.md](./style.md) before drafting the final prompt.
+在撰写最终 Prompt 前，先阅读 [style.md](./style.md)。
 
-## Workflow
+## 工作流
 
-1. Read the paper's abstract.
-2. Read the contribution-heavy part of the introduction or summary section.
-3. Distill the paper into 2 to 4 concrete keywords.
-4. Choose one anime-animal mascot that best matches the domain and contribution.
-5. Build one final image prompt that can be pasted directly into Nano Banana 2.
+1. 阅读论文摘要。
+2. 阅读引言或总结中最能体现贡献的部分。
+3. 提炼 2 到 4 个具体关键词。
+4. 选择一个最适合论文领域与贡献的动漫动物主角。
+5. 组合出一段可以直接粘贴到 Nano Banana 2 的最终 Prompt。
 
-## Output requirements
+## 输出要求
 
-The output should contain:
+输出结果应包含：
 
 - `Title`
 - `Keywords`
 - `Mascot`
 - `Prompt`
 
-## Decision rules
+## 决策规则
 
-- Prefer the abstract and explicit contribution statements over the rest of the paper.
-- Keywords should be technical and visualizable, not vague marketing words.
-- The mascot should fit the paper's role:
-  - coding and reasoning: fox, owl, raven, raccoon
-  - research and planning: raven, crane, wolf
-  - audio and speech: dolphin, nightingale, whale
-  - robotics and control: octopus, falcon, beetle, wolf
-  - motion and video: cheetah, swallow, panther
-  - vision and OCR: hawk, lynx, mantis, cat
-- The prompt should describe a logo-like single-subject composition, not a full poster scene.
-- Always include negative constraints: no text, no watermark, no UI, no multi-panel layout.
+- 优先相信摘要和明确写出的贡献点，而不是论文中其他次要内容。
+- 关键词应当既有技术含义，也能被视觉化，避免空泛的宣传词。
+- 动物主角应贴合论文类型：
+  - 编码与推理：狐狸、猫头鹰、渡鸦、浣熊
+  - 研究与规划：渡鸦、鹤、狼
+  - 音频与语音：海豚、夜莺、鲸鱼
+  - 机器人与控制：章鱼、猎鹰、甲虫、狼
+  - 动作与视频生成：猎豹、燕子、黑豹
+  - 视觉与 OCR：鹰、猞猁、螳螂、猫
+- Prompt 应强调“单主体、Logo 感、品牌感”，而不是完整海报场景。
+- 必须明确写出负向约束，例如：不要文字、不要水印、不要 UI、不要多分镜。
 
-## Folder-based usage
+## 文件夹模式
 
-If the user points to a paper folder:
+如果输入的是一个论文文件夹：
 
-1. Find the PDF in that folder.
-2. Extract the paper title, abstract, and contribution clues.
-3. Generate the prompt.
-4. Save the result as `prompt.md` in the same folder.
+1. 找到其中的 PDF。
+2. 提取论文标题、摘要和贡献线索。
+3. 生成 Prompt。
+4. 将结果保存为同目录下的 `prompt.md`。
 
-## Bundled resources
+## 附带资源
 
-- Prompt structure and phrasing guidance: [references/prompt-template.md](./references/prompt-template.md)
-- Batch subagent configuration: [agents/paper-logo-batch-subagent.md](./agents/paper-logo-batch-subagent.md)
-- UI-facing metadata: [agents/openai.yaml](./agents/openai.yaml)
+- Prompt 结构参考：[references/prompt-template.md](./references/prompt-template.md)
+- 风格说明：[style.md](./style.md)

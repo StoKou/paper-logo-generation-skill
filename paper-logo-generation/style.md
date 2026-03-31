@@ -1,48 +1,48 @@
-# Paper Logo Style Guide
+# 论文 Logo 风格指南
 
-This skill generates image prompts for paper logos intended for promotion, social cards, launch posts, and project branding.
+这个 Skill 面向论文宣传图、项目发布图、社交媒体封面和技术品牌化场景，目标是把论文内容压缩成一个更像“项目 Logo 提案”的图片 Prompt。
 
-## Core visual direction
+## 核心视觉方向
 
-- Use one anime-inspired animal mascot as the main subject.
-- Keep the composition icon-like and brandable rather than poster-like.
-- Prefer a clean silhouette, strong focal shape, and limited clutter.
-- Make the image feel like a premium project logo, not a full scene illustration.
+- 以一个动漫风动物主角作为画面核心。
+- 构图更偏图标化、标志化，而不是海报化。
+- 优先追求干净轮廓、明确重心和较少杂讯。
+- 最终气质应更接近高级项目 Logo，而不是完整场景插画。
 
-## Prompt ingredients
+## Prompt 必备元素
 
-Every final prompt should include:
+每个最终 Prompt 应包含：
 
-1. The paper's central technical idea in plain language.
-2. Two to four distilled keywords.
-3. One animal mascot matched to the paper domain.
-4. A visual metaphor that ties the animal to the paper's contribution.
-5. A polished logo-art direction with clear rendering constraints.
+1. 论文最核心的技术主题。
+2. 2 到 4 个提炼后的关键词。
+3. 一个与领域匹配的动物主角。
+4. 一个能把动物与贡献点连接起来的视觉隐喻。
+5. 明确的成图风格约束与负向限制。
 
-## Aesthetic rules
+## 美术规则
 
-- Anime mascot, confident pose, expressive but not childish.
-- Vector-logo feel mixed with soft cinematic illustration detail.
-- Strong negative space and readable outline.
-- Background should be simple or transparent-friendly.
-- No text, no letters, no watermarks, no UI panels, no screenshots.
-- Avoid generic stock mascots; the metaphor should reflect the paper.
+- 动漫感明确，但不要幼态化。
+- 允许带一点电影感细节，但整体仍要保留 Logo 的简洁感。
+- 要有明显留白和清晰外轮廓。
+- 背景尽量简单，适合做透明底或纯净底。
+- 不要文字，不要字母，不要水印，不要 UI 面板，不要截图感。
+- 避免“任何论文都能套用”的通用动物，主角应该服务于论文主题。
 
-## Domain-to-mascot hints
+## 领域与动物映射建议
 
-- Coding agents / software engineering: fox, owl, raccoon, raven
-- Audio / speech / music: dolphin, nightingale, whale, koi
-- Robotics / control / embodied systems: octopus, wolf, falcon, beetle
-- Vision / OCR / perception: hawk, cat, mantis, lynx
-- Research / planning / long-horizon agents: raven, crane, wolf, owl
-- Motion / video generation: cheetah, falcon, swallow, panther
-- Evaluation / testing / benchmarking: ant, owl, beaver, raven
+- 编码智能体 / 软件工程：狐狸、猫头鹰、渡鸦、浣熊
+- 音频 / 语音 / 音乐：海豚、夜莺、鲸鱼、锦鲤
+- 机器人 / 控制 / 具身系统：章鱼、狼、猎鹰、甲虫
+- 视觉 / OCR / 感知：鹰、猫、螳螂、猞猁
+- 研究 / 规划 / 长程智能体：渡鸦、鹤、狼、猫头鹰
+- 动作 / 视频生成：猎豹、猎鹰、燕子、黑豹
+- 评测 / 测试 / Benchmark：蚂蚁、猫头鹰、海狸、渡鸦
 
-## Final prompt tone
+## 最终 Prompt 的语气
 
-The final prompt should read like a production-ready image-generation brief:
+最终 Prompt 应该像一段可直接投喂给图像模型的专业视觉说明：
 
-- concrete
-- visual
-- compact but vivid
-- easy to pass directly into Nano Banana 2
+- 具体
+- 有画面感
+- 简洁但鲜明
+- 一次复制即可用于 Nano Banana 2

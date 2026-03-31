@@ -1,46 +1,62 @@
-# paper-logo-generation-skill
+# 论文 Logo Prompt 生成 Skill
 
-`paper-logo-generation` is a focused skill for turning a research paper into a ready-to-use logo prompt.
+让论文先拥有一句好提示词，再拥有一枚真正像作品的 Logo。
 
-Give your Claude a paper PDF or paper link, invoke the skill, and it will:
+`paper-logo-generation` 是一个专门为论文项目设计的 Skill。它接收论文 PDF、arXiv 链接、Hugging Face 论文页，或本地论文文件夹，然后把抽象的研究内容压缩成一段可以直接交给 Nano Banana 2 的图像生成提示词。
 
-- read the abstract and the main contributions
-- extract 2 to 4 technical keywords
-- choose an anime-style animal mascot
-- output a polished prompt that can be sent straight to Nano Banana 2
+它不会停留在“总结论文”这一步，而是进一步完成：
 
-## Install
+- 读取论文摘要与核心贡献
+- 提炼 2 到 4 个可视化关键词
+- 选择一个与论文气质匹配的动漫动物主角
+- 组合成一段更像品牌提案而不是通用 AI 绘图描述的 Prompt
 
-Tell Claude to install the `paper-logo-generation` skill from this GitHub repo:
+## 安装方式
+
+告诉 Claude 从这个 GitHub 仓库安装 Skill：
 
 `https://github.com/StoKou/paper-logo-generation-skill.git`
 
-The actual skill lives in:
+Skill 主体目录：
 
-`github-repo/paper-logo-generation`
+`paper-logo-generation/`
 
-## Use
+## 使用方式
 
-Pass in either:
+你只需要给它下面任意一种输入：
 
-- a paper PDF
-- an arXiv / Hugging Face paper link
-- or a local folder containing the paper PDF
+- 一篇论文 PDF
+- 一条 arXiv / Hugging Face 论文链接
+- 一个包含论文 PDF 的本地文件夹
 
-The skill will return a logo-generation prompt, or save it as `prompt.md` when running in batch mode.
+随后它会返回一份结构化结果，包含：
 
-## Why it feels different
+- 论文标题
+- 关键词
+- 动物主角
+- 最终图片生成 Prompt
 
-This skill does not produce generic "AI art" prompts. It compresses the paper into a mascot-driven visual identity:
+## 这个项目的风格
 
-- technical enough to reflect the work
-- simple enough to become a logo
-- stylish enough for launch images and promotion
+这不是一个生成“普通海报提示词”的工具。
 
-## Repository layout
+它更像一个轻量的视觉概念设计器，核心目标是把论文里的方法感、领域感和项目气质，转成一个足够鲜明、足够好记、也足够适合传播的 Logo 方向。
 
-- `github-repo/README.md`: install and usage notes
-- `github-repo/paper-logo-generation/SKILL.md`: the reusable skill workflow
-- `github-repo/paper-logo-generation/style.md`: the visual language for paper-logo prompts
-- `github-repo/paper-logo-generation/agents/`: subagent-facing configuration
-- `github-repo/paper-logo-generation/meta.md`: future improvement notes
+换句话说，它关注的不只是“画什么”，更是：
+
+- 为什么这个动物适合这篇论文
+- 哪几个技术关键词值得被视觉化
+- 怎么让生成结果看起来像项目 Logo，而不是一张泛泛的插画
+
+## 仓库结构
+
+- `README.md`：项目说明与安装指引
+- `paper-logo-generation/SKILL.md`：Skill 主流程
+- `paper-logo-generation/style.md`：Logo Prompt 风格规范
+- `paper-logo-generation/references/prompt-template.md`：输出模板参考
+- `paper-logo-generation/meta.md`：项目元信息与后续优化方向
+- `app/`：项目介绍前端页面
+
+## 前端展示
+
+仓库附带一个简单的介绍页，直接打开 `app/index.html` 就可以预览项目说明、工作流、特性和示例视觉模块。
