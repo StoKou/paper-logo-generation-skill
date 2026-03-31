@@ -55,8 +55,19 @@ Skill 主体目录：
 - `paper-logo-generation/style.md`：Logo Prompt 风格规范
 - `paper-logo-generation/references/prompt-template.md`：输出模板参考
 - `paper-logo-generation/meta.md`：项目元信息与后续优化方向
-- `app/`：项目介绍前端页面
+- `docs/`：GitHub Pages 站点目录
 
-## 前端展示
+## GitHub Pages 构建方式
 
-仓库附带一个简单的介绍页，直接打开 `app/index.html` 就可以预览项目说明、工作流、特性和示例视觉模块。
+这个仓库已经按 GitHub Pages 的推荐方式整理为：
+
+- 发布分支：`main`
+- 发布目录：`/docs`
+
+站点入口文件是：
+
+- `docs/index.html`
+- `docs/styles.css`
+- `docs/.nojekyll`
+
+如果仓库设置中的 Pages 来源选择为 `Deploy from a branch`，并且目录指向 `main` 分支下的 `/docs`，页面就可以直接发布。
